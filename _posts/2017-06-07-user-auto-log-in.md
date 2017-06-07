@@ -3,11 +3,14 @@ layout: post
 title:  "remember user's name & password for auto log in"
 date:   2017-06-07 15:40:00 
 categories: java
-tags: session cookie
+tags: session cookie filter
 ---
 
 * content
 {:toc}
+
+
+使用cookie,session和filter完成用户自动登陆
 
 
 
