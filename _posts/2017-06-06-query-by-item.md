@@ -12,6 +12,7 @@ tags: JDBC servlet html
 实现类似亚马逊网站的分类搜索
 
 
+
 ## 1.大体外观框架的实现
 包括下拉菜单:可以通过html的select标签实现
 搜索框:可以通过html input标签 type="text"实现
@@ -96,23 +97,23 @@ public interface UserDao {
 
 ```java
 // 获得用户选择项目的所有数据集合
-    @Override
-    public List<User> getSelect(String userSelect, String userSearch) {
-        // 1.创建QueryRunner对象
-        QueryRunner qr = new QueryRunner(JDBCUtils.getDataSource());
-        // 2.书写数据库语句
-        String sql = "select * from user where " + userSelect + " like ? ";
-        System.out.println(userSelect);
-        System.out.println(userSearch);
-        // 3.执行数据库语句
-        try {
-            List<User> list = qr.query(sql, new BeanListHandler<User>(User.class), "%" + userSearch + "%");
-            System.out.println(list);
-            // 4.查询成功
-            return list;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            // 5.查询失败
-            throw new RuntimeException("查询失败");
-        }
+public List<User> getSelect(String userSelect, String userSearch) {
+    // 1.创建QueryRunner对象
+    QueryRunner qr = new QueryRunner(JDBCUtils.getDataSource());
+    // 2.书写数据库语句
+    String sql = "select * from user where " + userSelect + " like ? ";
+    System.out.println(userSelect);
+    System.out.println(userSearch);
+    // 3.执行数据库语句
+    try {
+        List<User> list = qr.query(sql, new BeanListHandler<User>(User.class), "%" + userSearch + "%");
+        System.out.println(list);
+        // 4.查询成功
+        return list;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        // 5.查询失败
+        throw new RuntimeException("查询失败");
     }
+}
+```
