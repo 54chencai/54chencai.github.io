@@ -9,13 +9,16 @@ tags: JDBC servlet html
 * content
 {:toc}
 
+
 实现类似亚马逊网站的分类搜索
+
 
 ## 1.大体外观框架的实现
 包括下拉菜单:可以通过html的select标签实现
 搜索框:可以通过html input标签 type="text"实现
 搜索按钮:可以通过html input标签的type="submit"实现
 ```html
+<div>
 <form style="text-align:center">
     <select name="select">
        <option value="id">id</option>
@@ -27,9 +30,11 @@ tags: JDBC servlet html
     <input type="text"  name="msg"  style='width:30%'>
     <input type="submit" value="搜索">
 </form>
+</div>
 ```
 
 ## 2.编写servlet
+
 ```java
 protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -55,6 +60,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
 ```
 
 ## 3.服务层接口
+
 ```java
 public interface UserService {
 
@@ -64,6 +70,7 @@ public interface UserService {
 ```
 
 ## 4.实现接口
+
 ```java
 public class UserServiceImpl implements UserService {
 
@@ -78,6 +85,7 @@ public class UserServiceImpl implements UserService {
 ```
 
 ## 5.dao层接口
+
 ```java
 public interface UserDao {
      public List<User> getSelect(String userSelect, String userSearch);
@@ -86,6 +94,7 @@ public interface UserDao {
 ```
 
 ## 6.实现dao层接口
+
 ```java
 // 获得用户选择项目的所有数据集合
     @Override

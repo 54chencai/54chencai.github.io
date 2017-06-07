@@ -11,6 +11,8 @@ tags: JDBC servlet html
 
 通过点击浏览器的"查询所有用户信息"连接,返回数据库中的用户信息
 
+
+
 ## 1.通过jsp(html)编写"查询所有用户信息"网页.
 连接`href='${pageContext.request.contextPath }/queryAll'`
 其中${pageContext.request.contextPath }为同过EL表达式获得当前项目路径
