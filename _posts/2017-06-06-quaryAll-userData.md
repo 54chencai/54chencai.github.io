@@ -1,7 +1,7 @@
 ---
-layout:post
-title:"查询并打印数据库中的数据到网页"
-date:2017-06-06
+layout: post
+title: "查询并打印数据库中的数据到网页"
+date: 2017-06-06 13:43:54
 categories: java
 tags: JDBC servlet html
 ---

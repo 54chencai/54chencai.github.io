@@ -1,7 +1,7 @@
 ---
-type:post
-title:"通过JDBC向Mysql数据库批量写入数据"
-date:2017-06-06
+layout: post
+title: "通过JDBC向Mysql数据库批量写入数据"
+date: 2017-06-06 18:13:04
 categories: java
 tags: mysql JDBC 
 ---
@@ -10,6 +10,7 @@ tags: mysql JDBC
 {:toc}
 
 通过Java  JDBC协议向数据库中写入批量数据,用于后续增删改查的练习,期间会用到apache组织编写的dbutils可以简化和数据库的交互.
+
 
 
 ## 1.编写数据库连接的工具类,做到代码的可重复利用,方便开发

@@ -1,14 +1,13 @@
 ---
-layout:post
-title:"实现类似亚马逊的分类搜索功能"
-date:2017-06-06
+layout: post
+title: "实现类似亚马逊的分类搜索功能"
+date: 2017-06-06 14:33:24
 categories: java
 tags: JDBC servlet html 
 ---
 
 * content
 {:toc}
-
 
 实现类似亚马逊网站的分类搜索
 
