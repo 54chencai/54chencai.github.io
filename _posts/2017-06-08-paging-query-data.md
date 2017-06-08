@@ -9,8 +9,6 @@ tags: limit mysql
 * content
 {:toc}
 
-
-
 实现分页查询,一般有两种方法,一种是基于数据库对sql语句支持的物理分页
 一种是基于算法的逻辑分页.
 
@@ -23,13 +21,14 @@ mysql: `select * from tableName limit startIndex,length;`
   - startIndex: 数据表的记录,从0开始
   - length:从startIndex开始查询多少条记录
 模拟分页显示,则查询长度应为每页显示的数据条数,当length=10时当前页码如下表
-当前页码|开始下标|查询长度
--|-|-
-1	 |0	|10	
-2	 |10	|10	
-3	 |20	|10	
-4	 |30	|10	
-pageNum|    |numPerPage
+
+|当前页码|开始下标|查询长度|
+|--|--|--|
+|1	 |0	    |10	|
+|2	 |10	|10	|
+|3	 |20	|10	|
+|4	 |30	|10	|
+|pageNum|    |numPerPage|
 
 则查询的开始下标:`startIndex=(pageNum-1)*numPerPage`
 ```java
@@ -51,8 +50,10 @@ pubic void demo() {
 
 ## 逻辑分页
 一次性查询所有数据,再截取需要的数据,通过subList(start,end)截取需要的数据
+
 当前页码|开始下标|结束下标|长度
-1   |0  |10 |10
+--|--|--|--
+1   |0   |10 |10
 2   |10  |20 |10
 3   |20  |30 |10
 4   |30  |40 |10
