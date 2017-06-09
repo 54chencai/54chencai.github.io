@@ -14,6 +14,7 @@ tags: iostream jsp
 
 
 ## 1. 在jsp网页中遍历本地文件目录
+
 ```js
 //获得本地文件根目录
     File root = new File("F:\\周杰伦");
@@ -40,6 +41,7 @@ tags: iostream jsp
 ```
 
 ## 2. servlet中设置java下载
+
 ```java
 // 获得文件路径
 String filepath = request.getParameter("filepath");
@@ -65,6 +67,7 @@ in.close();
 ```
 
 ## 3. 解决下载文件名乱码
+
 ```java
 String userAgent = request.getHeader("user-agent");
 if (userAgent.contains("Firefox") || userAgent.contains("Chorme")) {
