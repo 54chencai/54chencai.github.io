@@ -10,7 +10,7 @@ tags: ServletContext HttpSession ServletRequest PageContext
 {:toc}
 
 
-计录四大域对象的创建和销毁
+四大域对象的创建和销毁
 
 
 
